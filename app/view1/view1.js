@@ -41,17 +41,13 @@ angular.module('myApp.view1', ['ngRoute'])
       $scope.formTodoText = '';
     };
 
-    $scope.clearCompleted = function () {
-        // $scope.todos = _.filter($scope.todos, function(todo){
-        //     return !todo.done;
-        // });
 
-      $scope.clearCompleted = function() {
+    $scope.clearCompleted = function() {
         var oldList = $scope.todos;
         $scope.todos= [];
         angular.forEach(oldList, function(x) {
             if (!x.done) $scope.todos.push(x);
-        });
+      });
     };
     };
 
