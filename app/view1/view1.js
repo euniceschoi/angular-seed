@@ -15,8 +15,8 @@ angular.module('myApp.view1', ['ngRoute'])
       {text:'Study System Design', done:true},
       {text:'Learn More about CH',done:true},
       {text:'Look through my projects',done:true},
-      {text:'Learn AngularJS',done:false},
-      {text:'Create an App',done:false},
+      {text:'Learn AngularJS',done:true},
+      {text:'Create an App',done:true},
       {text:'Get Hired!',done:false}
     ];
 
@@ -32,7 +32,7 @@ angular.module('myApp.view1', ['ngRoute'])
   $scope.reasonsWhyMe = [
       {text:'As a recent college grad, I am freshly familiar with best study practices and materials. I have had to stand in lines for practice exams and have previously initiated shared study guides on Google Drive. I am all about knowledge sharing!',icon:"fa fa-graduation-cap fa-2x fa-border"},
       {text:'What sets me apart as a full stack developer is my eye for detail, which comes from my love for painting and design.',icon:"fa fa-eye fa-2x fa-border"},
-      {text:'I can adapt easily between working independently and collaborating with others. I believe in self-growth via learning and hands on experience!',icon:"fa fa-hand-paper-o fa-2x fa-border"},
+      {text:'I can adapt easily between working independently and collaborating with others. I believe in self-growth via learning and hands on experience.',icon:"fa fa-hand-paper-o fa-2x fa-border"},
       {text:'I am always curious and excited to solve any kind of puzzles: whether it be zombie games, Settlers of Catan, or debugging!',icon:"fa fa-lightbulb-o fa-2x fa-border"}
   ];
 
@@ -42,9 +42,17 @@ angular.module('myApp.view1', ['ngRoute'])
     };
 
     $scope.clearCompleted = function () {
-        $scope.todos = _.filter($scope.todos, function(todo){
-            return !todo.done;
+        // $scope.todos = _.filter($scope.todos, function(todo){
+        //     return !todo.done;
+        // });
+
+      $scope.clearCompleted = function() {
+        var oldList = $scope.todos;
+        $scope.todos= [];
+        angular.forEach(oldList, function(x) {
+            if (!x.done) $scope.todos.push(x);
         });
+    };
     };
 
 }]);

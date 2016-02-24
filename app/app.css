@@ -3,6 +3,7 @@
 body {
   font-family: "Open Sans",sans-serif;
   font-weight:lighter;
+  height:100%;
 
 }
 
@@ -267,3 +268,8 @@ color:#0aaae7;
   padding-top:20px;
 }
 
+#footer {
+  position:relative;
+  bottom:0;
+  width:100%;
+}
