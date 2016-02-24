@@ -3,6 +3,11 @@
 body {
   font-family: "Open Sans",sans-serif;
   font-weight:lighter;
+
+}
+
+ul{
+  list-style-type: none;
 }
 
 h1,h2,h3 {
@@ -13,6 +18,7 @@ h1,h2,h3 {
   list-style: none;
   float:top;
   margin:0px;
+  font-family:"Roboto Slab";
 } ul {
   display: inline-block;
   font-size: 20px;
@@ -28,8 +34,8 @@ h1,h2,h3 {
 } a:visited {
     text-decoration: none;
     color:white;
-} a:hover {
-    color:white;
+} .menu a:hover {
+  text-decoration: underline;
 }
 
 .menu > li:before {
@@ -53,7 +59,6 @@ h1,h2,h3 {
 .mini-bar {
   background-color: #06476b;
   height:3em;
-  margin:0;
   color:#d8f0fd;
   text-align: center;
   padding-bottom:1em;
@@ -62,17 +67,10 @@ h1,h2,h3 {
 .mini-bar-contact > li {
   display: inline;
 }
-.mini-bar-contact> li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-.mini-bar-contact > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
+
 #why-course-hero{
 /*  background-image: url("https://static.pexels.com/photos/232/apple-iphone-books-desk.jpg");*/
-  height:70em;
+  height:60em;
   padding-top:3%;
   background-color:#f1f1f1;
  /*  background-image: url("https://static.pexels.com/photos/5377/books-bookshop-magazines.jpg");
@@ -92,7 +90,7 @@ h1,h2,h3 {
   margin-left:10%;
   width:20em;
   height:30em;
-  border-top: 2px solid #40d579;
+  border-top: 3px solid #40d579;
   background-color: white;
   padding:10px;
   color:#3d3d3d;
@@ -124,7 +122,7 @@ h1,h2,h3 {
   width:45em;
   height:30em;
   margin-right:10%;
-  border-top:2px solid #ff911a;
+  border-top:3px solid #ff911a;
   padding:10px;
   vertical-align: top;
   border-radius: 5px;
@@ -134,7 +132,7 @@ h1,h2,h3 {
 
 #why-ch-table {
   width:100%;
-} td {
+} #why-ch-table td {
   padding:10px;
   padding-bottom:15px;
 }
@@ -165,8 +163,105 @@ color:#0aaae7;
   margin-left:10%;
   margin-right:10%;
   margin-top:3%;
-  border-top:2px solid #ff911a;
+  border-top:3px solid #40d579;
   padding:10px;
   border-radius: 5px;
   height:20em;
+}
+#why-me-table {
+  width:90%;
+  margin:0 auto;
+} #why-me-table td {
+  margin:10%;
+  padding:5px;
+}
+
+
+.add-input {
+  width:80%;
+} #todo-form {
+  width:90%;
+  text-align: center;
+} #buttons {
+  text-align: center;
+  width:90%;
+  padding-top:5%;
+}
+
+#courses-header {
+  height:12em;
+  background-image: linear-gradient(to bottom, #f7fcfe 0%, #e6f6fd 100%);
+  border-bottom: 1px solid #bbe8f9;
+  text-align: center;
+} #courses-header h1{
+  color:#0aaae7;
+  margin-top: 0;
+  padding-top:15px;
+} #courses-header p {
+  padding-right:22%;
+  padding-left:22%;
+  font-weight: bolder;
+  color:#3a3a3a;
+  font-size:18px;
+}
+#list-of-courses {
+  height:50em;
+}
+#courses-div {
+  height:40em;
+  margin:0 auto;
+  width:60%;
+  border-radius:5px;
+  border:1px solid #bbe8f9;
+  margin-top:5%;
+}
+#search-bar {
+  height:10%;
+  background-image: linear-gradient(to bottom, #f7fcfe 0%, #e6f6fd 100%);
+  border-bottom:1px solid #bbe8f9;
+}#search-bar input{
+  float:right;
+  display:inline-block;
+  margin-top:2%;
+  margin-right:2%;
+  width:30%;
+  height:30%;
+} #search-bar h2{
+  display:inline-block;
+}
+#courses-table a{
+  color:#0aaae7;
+} #courses-table a:hover{
+  color:#ff911a;
+}
+#courses-table td {
+  padding-left:10%;
+  border-bottom:.5px solid #bbe8f9;
+  /*width:100%;*/
+}
+#courses-table {
+  width:100%;
+  height:100%;
+}
+#scrollable-div {
+  width: 100%;
+  height: 90%;
+  overflow: scroll;
+}
+.mini-bar p {
+  margin-top:0;
+  font-family:"Roboto Slab";
+  padding-top:20px;
+  text-align: center;
+}
+
+#bottom-menu {
+  background-color: #0aaae7;
+  height:5em;
+  text-align:center;
+} #bottom-menu .fa {
+  color:white;
+} #bottom-menu p {
+  margin-top:0;
+  padding-top:20px;
 }
